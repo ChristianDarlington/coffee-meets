@@ -2,26 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  --main-color:#443;
+  --border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+  --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
+  --border: .2rem solid var(--main-color);
+  --border-hover: .2rem dashed var(--main-color)
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
   }
+
+  html{
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+  }
+
+
+/* base styles */
+body {
+  background: #ebf0fa;
+  @apply text-gray-700 ;
+}
+h1, h2 {
+  @apply font-bold text-primary text-lg;
+}
+main {
+  @apply max-w-5xl my-12 mx-auto px-8;
+}
+main > h2 {
+  @apply mb-4 pb-2 text-base ;
+}
+p > a {
+  @apply text-primary underline;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+
+/* button styles */
+button {
+  @apply 
+    px-3 py-2 
+    rounded-sm 
+    flex justify-between items-center gap-2
+    text-sm;
 }
+button:hover {
+  @apply bg-opacity-90;
+}
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-secondary {
+  @apply bg-gray-200 text-gray-900;
+}
+
+/* card styles */
+.card {
+  @apply 
+    bg-white 
+    shadow-sm 
+    rounded-md 
+    py-3 px-4 my-4 
+    relative 
+    overflow-hidden;
+}
+.card h3 {
+  @apply 
+    font-bold text-gray-700 text-sm 
+    mb-0;
+}
+.card p {
+  @apply my-4 text-sm leading-6;
+}
+
