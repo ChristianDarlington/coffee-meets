@@ -1,28 +1,20 @@
 import Groupimg from '../public/group.jpeg'
 import Image from 'next/image'
 
+
 export default function Home() {
   return (
-    <main>
-      <div className="absolute inset-0 z-0 top-0 left-0">
-     <Image src={Groupimg} 
+    <main>     
+      <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[1]'/>
+     <Image 
+    src={Groupimg} 
     alt='group-coffee' 
-    quality={100}
-    sizes="100vw"
-    style={{
-      width: '100%',
-      height: '85%',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      zIndex: '-1',
-    }}    
+    quality={100} 
+    fill
+    objectFit='cover'
      />
-
-      <section>
-        
-      </section>
-
-      </div>
+      <section>      
+      </section>  
     </main>
   )
 }

@@ -10,14 +10,7 @@
   --border-hover: .2rem dashed var(--main-color)
 }
 
-* {
-  margin: 0; padding: 0;
-  box-sizing: border-box;
-  outline: none; border: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all .2s linear;
-  }
+
 
   html{
     overflow-x: hidden;
